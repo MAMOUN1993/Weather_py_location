@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    list-style: none;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 20px;
+    gap: 20px;
+    animation-name: change_image;
+    animation-duration: 240s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    background-color: black;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes change_image{
+0% {
+    background-image: url(../image/تنزيل.jfif);
+    
+}
+20%{
+    background-image: url(../image//B9316661963Z.1_20150319105958_000_GLQA8VSAM.1-0.webp);
+}
+40% {  
+    background-image: url(../image/28522533_web1_Showers.jpg);
+} 
+60% {  
+    background-image: url(../image/weather1_0.jpg);
+} 
+80% {  
+    background-image: url(../image/2022-Weather-Forecast-Science-GettyImages-1235749180.webp);
+}
+100%{
+    background-image: url(../image/تنزيل.jfif);
+}
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    transition-duration: 500ms;
+    opacity: 0;
+    z-index: -1;
+}
+.header {
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: inset 0px 0px 2px 0px;
+    padding: 30px;
+    border-radius: 15px;
+    gap: 30px 200px;
+    background-color: #2323c24d;
+    flex-wrap: wrap;
+}
+.header>div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.header>div>div{
+    display: flex;
+    justify-content: flex-start;
+}
+.tempo_hour{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    box-shadow: inset 0px 0px 2px 0px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #2323c24d;
+}
+.tempo_hour h3 {
+    text-align: center;
+}
+.tempo_hour>ol{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px 75px;
+    flex-wrap: wrap;
+}
+.tempo_hour>ol>li {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.tempo_hour>ol div {
+    display: flex;
+    justify-content: flex-start;
+}
+.temp_head{
+    display: flex;
+    flex-direction: column;
+    gap: 30px !important;
+    justify-content: space-evenly;
+}
+.temp_head>div{
+    display: flex;
+    justify-content: center !important;
+    gap: 20px;
+    align-items: center;
+}
+.temp_head>div p {
+    font-size: 45px;
+}
+.temp_head>div i {
+    font-size: 40px;
+}
+.fa-solid{
+    width: 30px;
+}
+.fa-temperature-three-quarters{
+    margin-right: 5px;
+    margin-left: -5px;
+}
+.temp_days{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    box-shadow: inset 0px 0px 2px 0px;
+    background-color:#2323c24d;
+    padding: 30px;
+    border-radius: 15px;
+}
+.temp_days>ol{
+    display: flex;
+    justify-content: flex-start;
+    gap: 35px 50px;
+    flex-wrap: wrap;
+}
+.temp_days h3{
+    text-align: center;
+}
+.temp_days li {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.temp_days div {
+    display: flex;
+    justify-content: flex-start;
+}
+.button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+.loading {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50% , -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 50px;
+    box-shadow: inset 0px 0px 2px 1px;
+    border-radius: 20px;
+}
+.loading_p {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+.button_loading{
+    border-radius: 20px;
+    padding: 10px;
+}
+.loading_p>i{
+    animation-name: loading_icone;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    width: 16px;
+    height: 16px;
+}
+@keyframes loading_icone {
+    0% {transform: rotate(0deg);}
+    25% { transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    75%{transform: rotate(270deg);}
+    100%{transform: rotate(360deg);}
+}
+.Wather_api {
+    color: white;
+    text-decoration: none;
+}
