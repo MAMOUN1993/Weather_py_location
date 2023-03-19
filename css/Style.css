@@ -211,7 +211,7 @@
     75%{transform: rotate(270deg);}
     100%{transform: rotate(360deg);}
 }
-.Wather_api {
+.Weather_api {
     color: white;
     text-decoration: none;
 }
